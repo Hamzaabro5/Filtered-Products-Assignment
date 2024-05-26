@@ -238,3 +238,12 @@ products.map((item) => {
     <hr/>
     `
 })
+
+const filteredProduct = (btn) => {
+    console.log(btn.innerHTML);
+
+    const filtered = products.filter(item => {
+        return item.category === btn.innerHTML
+    })
+    console.log(filtered);
+}
