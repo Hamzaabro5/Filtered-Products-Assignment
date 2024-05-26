@@ -226,12 +226,12 @@ const products = [
 
 
 
-const div = document.querySelector(`div`)
+const card = document.querySelector(`.cardd`)
 
 
 
 products.map((item) => {
-    div.innerHTML += `
+    card.innerHTML += `
     <h1>Product Name: ${item.brand} ${item.name}<h1>
     <h1>Category: ${item.category}<h1>
     <h1>Price: ${item.price}<h1>
@@ -239,22 +239,31 @@ products.map((item) => {
     `
 })
 
-const filteredProduct = (btn) => {
-    div.innerHTML = ``
+function  filteredProduct(btn){
+    card.innerHTML = ``
     console.log(btn.innerHTML);
 
     const filtered = products.filter(item => item.category === btn.innerHTML).map(item => {
-        div.innerHTML += `
+        card.innerHTML += `
     <h1>Product Name: ${item.brand} ${item.name}<h1>
     <h1>Category: ${item.category}<h1>
     <h1>Price: ${item.price}<h1>
     <hr/>
     `
     })
-    console.log(filtered);
+    // console.log(filtered);
 }
 
 
 function getAllCategories(btn) {
-   
+    card.innerHTML = ``
+    console.log(btn.innerHTML);
+    products.map(item => {
+        card.innerHTML += `
+    <h1>Product Name: ${item.brand} ${item.name}<h1>
+    <h1>Category: ${item.category}<h1>
+    <h1>Price: ${item.price}<h1>
+    <hr/>
+    `
+    })
 }
