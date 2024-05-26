@@ -230,39 +230,11 @@ const div = document.querySelector(`div`)
 
 
 
-
-
-const electronics = products.filter(item => {
-    return item.category === 'Electronics'
+products.map((item) => {
+    div.innerHTML += `
+    <h1>Product Name: ${item.brand} ${item.name}<h1>
+    <h1>Category: ${item.category}<h1>
+    <h1>Price: ${item.price}<h1>
+    <hr/>
+    `
 })
-
-const fitness = products.filter(item => {
-    return item.category === 'Fitness'
-})
-
-const homeAppliance = products.filter(item => {
-    return item.category === 'Home Appliances'
-})
-
-const KitchenAppliance = products.filter(item => {
-    return item.category === 'Kitchen Appliances'
-})
-
-const Footwear = products.filter(item => {
-    return item.category === 'Footwear'
-})
-
-const Stationery = products.filter(item => {
-    return item.category === 'Stationery'
-})
-
-
-const Furniture = products.filter(item => {
-    return item.category === 'Furniture'
-})
-
-function getElectronics() {
-    div.innerHTML += `<li>${electronics}</li>`
-
-    console.log(electronics);
-}
