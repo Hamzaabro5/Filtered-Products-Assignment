@@ -240,10 +240,21 @@ products.map((item) => {
 })
 
 const filteredProduct = (btn) => {
+    div.innerHTML = ``
     console.log(btn.innerHTML);
 
-    const filtered = products.filter(item => {
-        return item.category === btn.innerHTML
+    const filtered = products.filter(item => item.category === btn.innerHTML).map(item => {
+        div.innerHTML += `
+    <h1>Product Name: ${item.brand} ${item.name}<h1>
+    <h1>Category: ${item.category}<h1>
+    <h1>Price: ${item.price}<h1>
+    <hr/>
+    `
     })
     console.log(filtered);
+}
+
+
+function getAllCategories(btn) {
+   
 }
