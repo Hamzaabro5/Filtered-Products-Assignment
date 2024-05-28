@@ -245,10 +245,13 @@ function  filteredProduct(btn){
 
     const filtered = products.filter(item => item.category === btn.innerHTML).map(item => {
         card.innerHTML += `
-    <h1>Product Name: ${item.brand} ${item.name}<h1>
-    <h1>Category: ${item.category}<h1>
-    <h1>Price: ${item.price}<h1>
-    <hr/>
+        <div class="card bg-info border-danger text-success-emphasis border-3 rounded-4" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title text-center mb-3">${item.brand} ${item.name}</h4>
+          <p class="card-text mb-4"><b>Category :</b> ${item.category}</p>
+          <p class="card-text"><b>Price :</b> $${item.price}</p> 
+        </div>
+        </div>
     `
     })
     // console.log(filtered);
@@ -260,10 +263,13 @@ function getAllCategories(btn) {
     console.log(btn.innerHTML);
     products.map(item => {
         card.innerHTML += `
-    <h1>Product Name: ${item.brand} ${item.name}<h1>
-    <h1>Category: ${item.category}<h1>
-    <h1>Price: ${item.price}<h1>
-    <hr/>
+        <div class="card bg-info border-danger text-success-emphasis border-3 rounded-4" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title text-center mb-3">${item.brand} ${item.name}</h4>
+          <p class="card-text mb-4"><b>Category :</b> ${item.category}</p>
+          <p class="card-text"><b>Price :</b> $${item.price}</p> 
+        </div>
+        </div>
     `
     })
 }
